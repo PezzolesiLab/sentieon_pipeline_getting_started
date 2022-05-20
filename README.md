@@ -4,8 +4,6 @@ The bones for the Sentieon pipeline come from the Yandell lab at the University 
 <br/>
 <br/>
 
-# Quick Start
-
 ## FASTQs
 
 All of the fastq files that you want to push through the pipeline need to be in the same directory. If the fastqs are in different directories you can create symbolic links that are all in the same directory for the fastqs of interest.
