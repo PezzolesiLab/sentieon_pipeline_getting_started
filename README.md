@@ -1,6 +1,6 @@
 # The Sentieon Pipeline
 
-The bones for the Sentieon pipeline come from the Yandell lab at the University of Utah. It is set up to run on the CHPC notchpeak server. My predecessor in the Pezzolesi lab, Scott Frodsham, did some tweaking and it has ran great for the lab. I also have made a couple of changes to it affecting runtime and fastq input. The purpose of this repository however, is to provide some background and resources on the pipeline as well as a walkthrough on running this ready to go out of the box variant calling pipeline.
+The bones for the Sentieon pipeline come from the Yandell lab at the University of Utah. It is set up to run on the CHPC notchpeak server. My predecessor in the Pezzolesi lab, Scott Frodsham, did some tweaking and it has ran great for the lab. I also have made a couple of changes to it affecting runtime and fasta/fastq input. The purpose of this repository however, is to provide some background and resources on the pipeline as well as a walkthrough on running this ready to go out of the box variant calling pipeline.
 <br/>
 <br/>
 
