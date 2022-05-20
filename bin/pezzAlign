@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+file=$1
+
+# split the newFile name to get the sample id
+IFS="." read -ra filenameExt <<< $file
+IFS="_" read -ra idRead <<< ${filenameExt[0]}
+id=${idRead[0]}
+# don't need to include this in the readgroup
+# see section 9.1 of sentieon manual 201808.03
+# readNum=${idRead[1]}
+
+# Get flowcell and lane information. These are homogenous throughout so I'm just taking it from the first line
+flowcellLane=$(cat $file | head -n 1 | cut -d ":" -f 3,4)
+IFS=":" read -ra fcLn <<< $flowcellLane
+flowcell=${fcLn[0]}
+lane=${fcLn[1]}
+
+# create the readgroup string
+rg=$(echo "@RG\tID:$id.$flowcell.$lane\tSM:$id\tPL:ILLUMINA\tPU:$flowcell.$lane\tLB:$id")
+# create the output line that will be consumed by a nextflow channel
+
+echo $rg
