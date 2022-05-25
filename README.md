@@ -19,7 +19,7 @@ You need a config file to run the pipeline. You can create a new one if you'd li
 `cd configs`
 `cp existing.config yourNewConfig.config`
 
-### Changing the config's parameters
+### Changing the config's parameters UPDATE THIS
 The `nextflow.config` file contains all of the parameters specific to your project that nextflow needs to successfully run your
 data through to the end. In the `params` section, you'll want to make sure that the following variables are set to work with your
 data: `project`, `dataDir`, `isDemuxNeeded`, `barcodeFile`, `sampleKey`, `isIntervalNeeded`, and `bedFile`. In the `process`
@@ -74,7 +74,7 @@ VQSR Explanation - https://gatk.broadinstitute.org/hc/en-us/articles/36003553161
 
 Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
 
-## Dependencies
+## Dependencies UPDATE LIST
 
 ### Install
  * annovar (currently pointing to my copy of the .pl script but the pezzolesi-group1 copy of the annovar DB)
