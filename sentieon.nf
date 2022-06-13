@@ -39,7 +39,7 @@ log.info """\
        bgzip/1.7
        samtools/1.9
        tabix/1.7
-       sentieon/201711.05
+       sentieon/202112.04
     
     ==================================
 """
@@ -339,7 +339,7 @@ if ( !gvcfStart ) {
                 '''
                 export RG=$(pezzAlign !{fq1})
                 echo $MODULEPATH
-                module load sentieon/201711.05
+                module load sentieon/202112.04
 
                 ( bwa mem -M \\
                 -R $RG \\
@@ -446,7 +446,7 @@ if ( !gvcfStart ) {
                 '''
                 export RG=$(pezzAlign !{fq})
                 echo $MODULEPATH
-                module load sentieon/201711.05
+                module load sentieon/202112.04
 
                 ( bwa mem -M \\
                 -R $RG \\
@@ -475,7 +475,7 @@ if ( !gvcfStart ) {
 
             shell:
             '''
-            module load sentieon/201711.05
+            module load sentieon/202112.04
             sentieon driver \\
             -t !{params.cpus_left} \\
             -i !{bam} \\
@@ -504,7 +504,7 @@ if ( !gvcfStart ) {
 
             shell:
             '''
-            module load sentieon/201711.05
+            module load sentieon/202112.04
             sentieon driver \\
             -t !{params.cpus_left} \\
             -r !{params.reference} \\
@@ -531,7 +531,7 @@ if ( !gvcfStart ) {
 
             shell:
             '''
-            module load sentieon/201711.05
+            module load sentieon/202112.04
             sentieon driver \\
             -t !{params.cpus_left} \\
             -r !{params.reference} \\
@@ -569,7 +569,7 @@ if ( !gvcfStart ) {
 
             shell:
             '''
-            module load sentieon/201711.05
+            module load sentieon/202112.04
             sentieon driver \\
             -t !{params.cpus_left} \\
             --algo QualCal \\
@@ -637,7 +637,7 @@ if ( !gvcfStart ) {
             shell:
             if (interval) {
                 '''
-                module load sentieon/201711.05
+                module load sentieon/202112.04
                 sentieon driver \\
                 -t !{params.cpus_left} \\
                 -i !{bam} \\
@@ -652,7 +652,7 @@ if ( !gvcfStart ) {
                 '''
             } else {
                 '''
-                module load sentieon/201711.05
+                module load sentieon/202112.04
                 sentieon driver \\
                 -t !{params.cpus_left} \\
                 -i !{bam} \\
@@ -680,7 +680,7 @@ if ( !gvcfStart ) {
 
             shell:
             '''
-            module load sentieon/201711.05
+            module load sentieon/202112.04
             sentieon driver \\
             -t !{params.cpus_left} \\
             -r !{params.reference} \\
@@ -767,7 +767,7 @@ if ( !gvcfStart ) {
 
             if (interval) {
                 '''
-                module load sentieon/201711.05
+                module load sentieon/202112.04
                 sentieon driver \\
                 -t !{params.cpus_left} \\
                 -i !{bam} \\
@@ -782,7 +782,7 @@ if ( !gvcfStart ) {
                 '''
             } else {
                 '''
-                module load sentieon/201711.05
+                module load sentieon/202112.04
                 sentieon driver \\
                 -t !{params.cpus_left} \\
                 -i !{bam} \\
@@ -810,7 +810,7 @@ if ( !gvcfStart ) {
 
             shell:
             '''
-            module load sentieon/201711.05
+            module load sentieon/202112.04
             sentieon driver \\
             -t !{params.cpus_left} \\
             -r !{params.reference} \\
@@ -885,7 +885,7 @@ process gvcfTyper {
         inputGVCFs = gvcfs.join(' -v ')
 
         '''
-        module load sentieon/201711.05
+        module load sentieon/202112.04
         sentieon driver \\
         -t !{params.cpus_left} \\
         -r !{params.reference} \\
@@ -901,7 +901,7 @@ process gvcfTyper {
 
 
         '''
-        module load sentieon/201711.05
+        module load sentieon/202112.04
         sentieon driver \\
         -t !{params.cpus_left} \\
         -r !{params.reference} \\
@@ -924,7 +924,7 @@ if (!isTargSeq) {
         set file(jointCalled_vcf), file(index), file("${params.project}_recal.tranches.snp"), file("${params.project}_recal.snp.vcf.gz"), file("${params.project}_recal.snp.vcf.gz.tbi") into varCalSNP_out
 
         """
-        module load sentieon/201711.05
+        module load sentieon/202112.04
         sentieon driver \\
         --thread_count $params.cpus_left \\
         -r $params.reference \\
@@ -969,7 +969,7 @@ if (!isTargSeq) {
         set file("${params.project}_applyRecal.snp.vcf.gz"), file("${params.project}_applyRecal.snp.vcf.gz.tbi") into appliedSNP_out
 
         """
-        module load sentieon/201711.05
+        module load sentieon/202112.04
         sentieon driver \\
         --thread_count $params.cpus_left \\
         -r $params.reference \\
@@ -994,7 +994,7 @@ if (!isTargSeq) {
         set file(snp_recal_file), file(index), file("${params.project}_recal.tranches.indel"), file("${params.project}_recal.indel.vcf.gz"), file("${params.project}_recal.indel.vcf.gz.tbi") into varCalIndel_out
 
         """
-        module load sentieon/201711.05
+        module load sentieon/202112.04
         sentieon driver \\
         --thread_count $params.cpus_left \\
         -r $params.reference \\
@@ -1036,7 +1036,7 @@ if (!isTargSeq) {
         set file("${params.project}_VQSR.vcf.gz"), file("${params.project}_VQSR.vcf.gz.tbi") into appliedIndel_out
 
         """
-        module load sentieon/201711.05
+        module load sentieon/202112.04
         sentieon driver \\
         --thread_count $params.cpus_left \\
         -r $params.reference \\
