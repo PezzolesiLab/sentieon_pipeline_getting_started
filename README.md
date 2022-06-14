@@ -77,14 +77,15 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
 ## Dependencies UPDATE LIST
 
 ### Install
+**I install these in a conda/mamba environment called sentieon, then activate it when running the pipeline**
  * annovar (currently pointing to my copy of the .pl script but the pezzolesi-group1 copy of the annovar DB)
  * fastp/0.19.6
  * cutadapt/1.6 or higher
  * fastq-multx/1.3.1
+ * multiqc/1.7
 
 ### Modules Needed
  * bcftools/1.7
- * multiqc/1.7
  * bgzip/1.7
  * samtools/1.9
  * tabix/1.7
