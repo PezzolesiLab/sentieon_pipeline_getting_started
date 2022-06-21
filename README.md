@@ -19,7 +19,7 @@ You need a config file to run the pipeline. You can create a new one if you'd li
 `cd configs`
 `cp existing.config yourNewConfig.config`
 
-Note on Fasta/Fastq files: If you are running fastq/fasta files, the pipeline used to look for them to be named a certain way, I have updated the pipeline to just look for the r1 or r2 in the name, so any naming convention for your fasta/fastqs should work as long as the read number is in the file name.
+**Note on Fasta/Fastq files**: If you are running fastq/fasta files, the pipeline used to look for them to be named a certain way, I have updated the pipeline to just look for the r1 or r2 in the name, so any naming convention for your fasta/fastqs should work as long as the read number is in the file name. Wuxi naming format works and looks like this: `LU01-ID_S3_R1_003.fastq.gz, LU01-ID_S3_R2_003.fastq.gz`, the updated pipeline accepts this (where ID is anything):`ID_R1.fastq.gz or ID_R2.fastq.gz as long as R1/R2 or r1/r2 read numbers exist`.
 
 ### Changing the config's parameters UPDATE THIS
 The `nextflow.config` file contains all of the parameters specific to your project that nextflow needs to successfully run your
