@@ -89,6 +89,6 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
  * bgzip/1.7
  * samtools/1.9
  * tabix/1.7
- * sentieon/201711.05 (Auto-loaded, don't worry about this one)
+ * sentieon/202112.04 (Auto-loaded, don't worry about this one)
 
  Example loading bcftools: `ml bcftools/1.7` or `module load bcftools/1.7`
