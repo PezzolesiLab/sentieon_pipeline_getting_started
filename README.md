@@ -76,7 +76,7 @@ VQSR Explanation - https://gatk.broadinstitute.org/hc/en-us/articles/36003553161
 
 Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
 
-## Dependencies UPDATE LIST
+## Dependencies
 
 ### Install
 **I install these in a conda/mamba environment called sentieon, then activate it when running the pipeline**
