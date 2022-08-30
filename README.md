@@ -83,7 +83,7 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
  * fastp/0.19.6
  * cutadapt/1.6 or higher
  * fastq-multx/1.3.1
- * hstlib (use prefix path here ./configure --prefix=~/software for it to install binaries in /bin) This installation includes tabix and bgzip.
+ * htslib (use prefix path here ./configure --prefix=~/software for it to install binaries in /bin) This installation includes tabix and bgzip.
 
 ### Modules Needed
 **Example loading bcftools: `ml bcftools/1.7` or `module load bcftools/1.7`.**
