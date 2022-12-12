@@ -79,16 +79,27 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
 ## Dependencies
 
 ### Install
-**I install these in a conda/mamba environment called sentieon, then activate it when running the pipeline**
- * fastp/0.19.6
- * cutadapt/1.6 or higher
+**There is currently only one software that needs to be installed.**
  * fastq-multx/1.3.1
- * htslib (use prefix path here ./configure --prefix=~/software for it to install binaries in /bin) This installation includes tabix and bgzip.
 
 ### Modules Needed
-**Example loading bcftools: `ml bcftools/1.7` or `module load bcftools/1.7`.**
-**To list all loaded modules type `module list` or to see all available modules type `module avail` or to search for a software type `module spider software`**
- * bcftools/1.7
- * samtools/1.9
+ * bcftools
+ * samtools
  * nextflow
  * multiqc
+ * fastp
+ * cutadapt
+ * htslib 
+ * annovar (this is loaded by the script)
+ 
+ To install these modules run the following code
+ ```
+ module load bcftools
+ module load samtools
+ module load nextflow
+ module load multiqc
+ module load fastp
+ module load cutadapt
+ module load htslib 
+ ```
+ Refer to the [CHPC website](https://www.chpc.utah.edu/documentation/software/modules.php) for more information on how to use modules.
