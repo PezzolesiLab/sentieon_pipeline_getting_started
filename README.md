@@ -81,6 +81,7 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
 ### Install
 **There is currently only one software that needs to be installed.**
  * fastq-multx/1.3.1
+ * fastp
 
 ### Modules Needed
  * bcftools
@@ -98,7 +99,6 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
  module load samtools
  module load nextflow
  module load multiqc
- module load fastp
  module load cutadapt
  module load htslib 
  ```
