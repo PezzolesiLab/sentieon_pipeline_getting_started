@@ -95,7 +95,7 @@ Forum - https://gatk.broadinstitute.org/hc/en-us/community/topics
  
  To install these modules run the following code
  ```
- module load bcftools
+ module load bcftools/1.16
  module load samtools
  module load nextflow
  module load multiqc
